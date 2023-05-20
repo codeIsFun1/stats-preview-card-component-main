@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  max-width: 70%;
+  /* border: 1px solid red; */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.left-card {
+  /* padding: 4rem; */
+  width: 50%;
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  width: 70%;
+  margin: 1rem 0;
+  margin-right: 0.6rem;
+}
+.title h1 {
+  font-size: 2rem;
+  color: white;
+}
+.title span {
+  color: hsl(277, 64%, 61%);
+}
+.para {
+  width: 70%;
+  margin: 1rem 0;
+}
+.para p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 100;
+}
+.utilities {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  width: 70%;
+}
+.utilities div {
+  margin: 0 2rem 0 0;
+}
+
+.utilities div p:first-child {
+  color: white;
+  font-size: 1.5rem;
+}
+.utilities div p:nth-child(2) {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.right-card,
+img {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.right-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(277, 87%, 25%);
+  opacity: 0.55;
+}
+
+@media (max-width: 1114px) {
+  body{
+    padding: 2rem ;
+  }
+    .container {
+    display: flex;
+
+    flex-direction: column-reverse;
+  }
+  .left-card {
+    width: 100%;
+  }
+  .utilities {
+    display: flex;
+    /* flex-direction: column;
+         */
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 431px) {
+  .utilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .utilities div:nth-child(3) {
+    margin-left: -16px;
+  }
+  .title h1{
+    font-size: 1rem;
+  }
+  .para p{
+    font-size: 1rem;
+  }
+}
